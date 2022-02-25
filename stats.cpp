@@ -10,7 +10,7 @@ Statistics::Stats::Stats(float Average,float Max,float Min):average(Average),max
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
 
 {
-    Stats<float> st;
+    Stats st;
     if(data.size()==0)
     {
        st.average=NAN;

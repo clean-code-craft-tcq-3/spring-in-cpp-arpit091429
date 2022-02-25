@@ -6,7 +6,7 @@ template<typename T> Statistics::Stats<>::Stats(){}
 template<typename T> Statistics::Stats<T,T,T>::Stats(T average,T max,T min):average(average),max(max),min(min){}
 template<typename T> Statistics::Stats<T> Statistics::ComputeStatistics(const std::vector<T>& data)
 {
-    Stats<T> st;
+    stats<T> st;
     if(data.size()==0)
     {
        st.average=NAN;

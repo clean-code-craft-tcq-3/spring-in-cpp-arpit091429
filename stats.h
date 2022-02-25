@@ -25,3 +25,39 @@ namespace Statistics
 	//Stats<T> ComputeStatistics(const std::vector<T>& );
 	Stats ComputeStatistics(const std::vector<float>&);
 }
+
+Stats ComputeStatistics(const std::vector<double>& );
+}
+
+class IAlerter {
+public:
+    virtual void setAlert(bool isAlert) = 0;
+};
+
+class EmailAlert : public IAlerter {
+public:
+    bool emailSent = false;
+    virtual void setAlert(bool isAlert) {
+        emailSent = isAlert;
+    }
+};
+
+class LEDAlert : public IAlerter {
+public:
+    bool ledGlows = false;
+    virtual void setAlert(bool isAlert) {
+        ledGlows = isAlert;
+    }
+};
+
+class StatsAlerter {
+    float maxThreshold;
+    std::vector<IAlerter*> alerts;
+public:
+    StatsAlerter(float maxThreshold, std::vector<IAlerter*>& alerts) {
+        this->maxThreshold = maxThreshold;
+        this->alerts = alerts;
+    }
+
+    void checkAndAlert(const std::vector<double>& );
+};

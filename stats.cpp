@@ -32,9 +32,9 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
     st.min = data[0];
     for (int i=1;i<data.size();i++)
     {
-        if(data[i]<st.max)
+        if(data[i]<st.min)
         {
-            st.max =data[i];
+           st.min =data[i];
         }
     }
     

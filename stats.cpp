@@ -42,9 +42,9 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
         return st;
 }
 
-    void StatsAlerter::checkAndAlert(const std::vector<double>& list_of_numbers) 
+    void StatsAlerter::checkAndAlert(const std::vector<double>& data) 
     {
-        for (auto number: list_of_numbers)
+        for (auto number: data)
         {
             if (number > maxThreshold) 
             {

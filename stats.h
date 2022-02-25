@@ -6,11 +6,10 @@
 using namespace std;
 
 namespace Statistics
-{
-    
+{  
 	template <typename T=double>	//default
 	class stats
-   	 {
+	 {
 	   public:
 		T average;
 		T max;

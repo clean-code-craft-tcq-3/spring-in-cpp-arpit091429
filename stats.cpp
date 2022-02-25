@@ -16,7 +16,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
     }
 
     st.max = data[0];
-    for (auto i=1;i<data.size();i++)
+    for (long unsigned int i=1;i<data.size();i++)
     {
         if(data[i]>st.max)
         {
@@ -25,7 +25,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
     }    
     
     st.min = data[0];
-    for (auto i=1;i<data.size();i++)
+    for (long unsigned int i=1;i<data.size();i++)
     {
         if(data[i]<st.min)
         {
@@ -34,7 +34,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
     }
     
     float sum=0.0;
-    for (auto i=0;i<data.size();i++)
+    for (long unsigned int i=0;i<data.size();i++)
     {
        sum = sum+data[i];
     }

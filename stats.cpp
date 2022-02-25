@@ -2,9 +2,9 @@
 
 #include<bits/stdc++.h>
 
-template<typename T> Statistics::Stats<>::Stats(){}
-template<typename T> Statistics::Stats<T,T,T>::Stats(T average,T max,T min):average(average),max(max),min(min){}
-template<typename T> Statistics::Stats<T> Statistics::ComputeStatistics(const std::vector<T>& data)
+template<typename T> Statistics::stats<>::stats(){}
+template<typename T> Statistics::stats<T,T,T>::stats(T average,T max,T min):average(average),max(max),min(min){}
+template<typename T> Statistics::stats<T> Statistics::ComputeStatistics(const std::vector<T>& data)
 {
     stats<T> st;
     if(data.size()==0)

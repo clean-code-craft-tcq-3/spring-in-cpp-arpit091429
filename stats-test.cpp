@@ -17,9 +17,9 @@ TEST_CASE("average is NaN for empty array") {
     auto computedStats = Statistics::ComputeStatistics({});
    // std::vector<float> data{};
     //auto computedStats = Statistics::ComputeStatistics(data);
-    REQUIRE(isnan(computedStats.Average));
-    REQUIRE(isnan(computedStats.Max));
-    REQUIRE(isnan(computedStats.Min));
+    REQUIRE(isnan(computedStats.average));
+    REQUIRE(isnan(computedStats.max));
+    REQUIRE(isnan(computedStats.min));
 }
 
 TEST_CASE("raises alerts when max is greater than threshold") {

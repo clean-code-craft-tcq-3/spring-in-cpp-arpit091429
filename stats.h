@@ -26,9 +26,6 @@ namespace Statistics
 	Stats ComputeStatistics(const std::vector<float>&);
 }
 
-Stats ComputeStatistics(const std::vector<double>& );
-}
-
 class IAlerter {
 public:
     virtual void setAlert(bool isAlert) = 0;

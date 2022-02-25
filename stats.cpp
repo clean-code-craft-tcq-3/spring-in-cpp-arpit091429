@@ -16,6 +16,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
        st.average=NAN;
        st.max=NAN;
        st.min=NAN;
+        return st;
     }
     
     //st.max=*max_element(data.begin(),data.end());

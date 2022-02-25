@@ -14,9 +14,9 @@ namespace Statistics
 		//T Average;
 		//T Max;
 		//T Min;
-		float Average;
-		float Max;
-		float Min;
+		float average;
+		float max;
+		float min;
 		Stats();//empty array
 		Stats(float avg,float max,float min);
 		//Stats(T average,T Max,T Min);

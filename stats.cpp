@@ -2,7 +2,7 @@
 
 #include<bits/stdc++.h>
 
-template<typename T> Statistics::stats<>::stats(){}
+template<typename T> Statistics::stats(){}
 template<typename T> Statistics::stats<T,T,T>::stats(T average,T max,T min):average(average),max(max),min(min){}
 template<typename T> Statistics::stats<T> Statistics::ComputeStatistics(const std::vector<T>& data)
 {

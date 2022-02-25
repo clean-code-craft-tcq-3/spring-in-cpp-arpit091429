@@ -38,7 +38,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
     }
     
     float sum=0.0;
-    for (int i=1;i<data.size();i++)
+    for (int i=0;i<data.size();i++)
     {
        sum = sum+data[i];
     }

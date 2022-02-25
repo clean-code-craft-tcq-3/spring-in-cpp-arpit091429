@@ -1,10 +1,6 @@
 #include "stats.h"
 
 #include<bits/stdc++.h>
-
-//template<typename T> Statistics::Stats<>::Stats(){}
-//template<typename T> Statistics::Stats<T,T,T>::Stats(T Average,T Max,T Min):Average(Average),Max(Max),Min(Min){}
-//template<typename T> Statistics::Stats<T> Statistics::ComputeStatistics(const std::vector<T>& data)
 Statistics::Stats::Stats(){}
 Statistics::Stats::Stats(float Average,float Max,float Min):average(Average),max(Max),min(Min){}
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
@@ -18,8 +14,7 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
        st.min=NAN;
         return st;
     }
-    
-    //st.max=*max_element(data.begin(),data.end());
+
     st.max = data[0];
     for (int i=1;i<data.size();i++)
     {
@@ -44,15 +39,22 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
        sum = sum+data[i];
     }
     st.average=(sum/data.size());
-    //st.min=*min_element(data.begin(),data.end());
-    //float sum=accumulate(data.begin(), data.end() , 0);
-    //st.average=(sum/data.size());
-    return st;
-   // float maxi=*max_element(data.begin(),data.end());
-    //float mini=*min_element(data.begin(),data.end());
-    //float sum=accumulate(data.begin(), data.end() , 0);
-    //float avg=sum/data.size();
-    //return Statistics::Stats(avg,maxi,mini);
+        return st;
+}
+
+    void StatsAlerter::checkAndAlert(const std::vector<double>& list_of_numbers) 
+    {
+        for (auto number: list_of_numbers)
+        {
+            if (number > maxThreshold) 
+            {
+                for (auto alertType: alerts)
+                    alertType->setAlert(true);
+            }
+        }
+    }   
+
+
 
     
-}
+

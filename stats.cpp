@@ -18,10 +18,34 @@ Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
        st.min=NAN;
     }
     
-    st.max=*max_element(data.begin(),data.end());
-    st.min=*min_element(data.begin(),data.end());
-    float sum=accumulate(data.begin(), data.end() , 0);
+    //st.max=*max_element(data.begin(),data.end());
+    st.max = data[0];
+    for (int i=1;i<data.size();i++)
+    {
+        if(data[i]>st.max)
+        {
+            st.max =data[i];
+        }
+    }    
+    
+    st.min = data[0];
+    for (int i=1;i<data.size();i++)
+    {
+        if(data[i]<st.max)
+        {
+            st.max =data[i];
+        }
+    }
+    
+    int sum;
+    for (int i=1;i<data.size();i++)
+    {
+       sum = sum+data[i];
+    }
     st.average=(sum/data.size());
+    //st.min=*min_element(data.begin(),data.end());
+    //float sum=accumulate(data.begin(), data.end() , 0);
+    //st.average=(sum/data.size());
     return st;
    // float maxi=*max_element(data.begin(),data.end());
     //float mini=*min_element(data.begin(),data.end());
